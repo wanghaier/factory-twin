@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build and packaging output
+dist/
+release/
+release-next/
+out/
+coverage/
+
+# Local runtime and temporary files
+work/
+*.log
+*.tmp
+*.temp
+*.local
+.vite/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# IDE and operating system
+.idea/
+.vscode/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local backups and private source assets
+素材/
+backup/
+新建文件夹/
+
+# Keep application icons because electron-builder needs them
+!build/icon.ico
+!build/icon-256.png

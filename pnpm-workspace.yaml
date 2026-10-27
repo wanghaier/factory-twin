@@ -1,0 +1,15 @@
+allowBuilds:
+  electron-winstaller: set this to true or false
+# pnpm 11 起，构建脚本白名单等设置从 package.json 移到本文件。
+# Electron 需要在安装时下载对应平台的运行时二进制，因此必须允许它的构建脚本。
+packages:
+  - '.'
+
+# 运行脚本前不自动做依赖校验：pnpm 11 会把"未批准的构建脚本"当成错误并触发重装，
+# 而本项目的依赖已经装好（Electron 运行时可手动补装），因此关闭该行为。
+verifyDepsBeforeRun: false
+
+onlyBuiltDependencies:
+  - electron
+  - electron-winstaller
+  - electron-builder
